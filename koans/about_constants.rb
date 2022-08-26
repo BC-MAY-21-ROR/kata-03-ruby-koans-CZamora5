@@ -1,10 +1,12 @@
-require File.expand_path(File.dirname(__FILE__) + '/neo')
+# frozen_string_literal: true
 
-C = "top level"
+require File.expand_path("#{File.dirname(__FILE__)}/neo")
 
+C = 'top level'
+
+# Ruby koan about constants
 class AboutConstants < Neo::Koan
-
-  C = "nested"
+  C = 'nested'
 
   def test_nested_constants_may_also_be_referenced_with_relative_paths
     assert_equal 'nested', C
@@ -20,13 +22,13 @@ class AboutConstants < Neo::Koan
   end
 
   # ------------------------------------------------------------------
-
+  # Animal class  
   class Animal
     LEGS = 4
     def legs_in_animal
       LEGS
     end
-
+    # NestedAnimal nested class
     class NestedAnimal
       def legs_in_nested_animal
         LEGS
@@ -39,7 +41,7 @@ class AboutConstants < Neo::Koan
   end
 
   # ------------------------------------------------------------------
-
+  # Reptile subclass
   class Reptile < Animal
     def legs_in_reptile
       LEGS
@@ -51,10 +53,10 @@ class AboutConstants < Neo::Koan
   end
 
   # ------------------------------------------------------------------
-
+  # MyANimals class
   class MyAnimals
     LEGS = 2
-
+    # Bird subclass
     class Bird < Animal
       def legs_in_bird
         LEGS
@@ -70,7 +72,7 @@ class AboutConstants < Neo::Koan
   # or the constant from the inheritance hierarchy?
 
   # ------------------------------------------------------------------
-
+  # Oyster class
   class MyAnimals::Oyster < Animal
     def legs_in_oyster
       LEGS

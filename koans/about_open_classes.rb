@@ -1,9 +1,13 @@
-require File.expand_path(File.dirname(__FILE__) + '/neo')
+# frozen_string_literal: true
 
+require File.expand_path("#{File.dirname(__FILE__)}/neo")
+
+# Ruby koan about open classes
 class AboutOpenClasses < Neo::Koan
+  # Dog class
   class Dog
     def bark
-      "WOOF"
+      'WOOF'
     end
   end
 
@@ -17,7 +21,7 @@ class AboutOpenClasses < Neo::Koan
   # Open the existing Dog class and add a new method.
   class Dog
     def wag
-      "HAPPY"
+      'HAPPY'
     end
   end
 
@@ -28,7 +32,7 @@ class AboutOpenClasses < Neo::Koan
   end
 
   # ------------------------------------------------------------------
-
+  # Integer class
   class ::Integer
     def answer_to_life_universe_and_everything?
       self == 42

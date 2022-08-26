@@ -1,10 +1,13 @@
-require File.expand_path(File.dirname(__FILE__) + '/neo')
+# frozen_string_literal: true
 
+require File.expand_path("#{File.dirname(__FILE__)}/neo")
+
+# Ruby koan about to str
 class AboutToStr < Neo::Koan
-
+  # CanNotBeTreatedAsString class
   class CanNotBeTreatedAsString
     def to_s
-      "non-string-like"
+      'non-string-like'
     end
   end
 
@@ -20,10 +23,10 @@ class AboutToStr < Neo::Koan
   end
 
   # ------------------------------------------------------------------
-
+  # CanBeTreatedAsString class
   class CanBeTreatedAsString
     def to_s
-      "string-like"
+      'string-like'
     end
 
     def to_str

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Triangle Project Code.
 
 # Triangle analyzes the lengths of the sides of a triangle
@@ -15,7 +17,7 @@
 #
 def triangle(a, b, c)
   sorted = [a, b, c].sort
-  if sorted[0] <= 0 || sorted[0] + sorted[1] <= sorted[2] 
+  if sorted[0] <= 0 || sorted[0] + sorted[1] <= sorted[2]
     raise TriangleError
   elsif a == b && b == c
     :equilateral

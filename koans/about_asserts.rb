@@ -1,13 +1,15 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 # -*- ruby -*-
 
-require File.expand_path(File.dirname(__FILE__) + '/neo')
+require File.expand_path("#{File.dirname(__FILE__)}/neo")
 
+# Ruby koan about asserts
 class AboutAsserts < Neo::Koan
-
   # We shall contemplate truth by testing reality, via asserts.
   def test_assert_truth
-    assert true                # This should be true
+    assert true # This should be true
   end
 
   # Enlightenment may be more easily achieved with appropriate
